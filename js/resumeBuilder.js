@@ -200,7 +200,7 @@ education.display = function() {
 
 	$('#education').append(HTMLonlineClasses);
 
-	for(var i=0;i<education.onlineCourses.length;i++) {
+	for(i=0;i<education.onlineCourses.length;i++) {
 		// $('#education').append(HTMLschoolStart);
 
 		$('#education').append(HTMLschoolStart);
@@ -209,8 +209,8 @@ education.display = function() {
 		var formattedSchool = HTMLonlineSchool.replace("%data%",this.onlineCourses[i].school);
 		$('.education-entry:last').append(formattedTitle+ formattedSchool);
 
-		var formattedDate = HTMLonlineDates.replace("%data%",this.onlineCourses[i].dates);
-		$('.education-entry:last').append(formattedDate);
+		var formattedOnlineDate = HTMLonlineDates.replace("%data%",this.onlineCourses[i].dates);
+		$('.education-entry:last').append(formattedOnlineDate);
 		var formattedUrl = HTMLonlineURL.replace("%data%",this.onlineCourses[i].url);
 		$('.education-entry:last').append(formattedUrl);
 	}
